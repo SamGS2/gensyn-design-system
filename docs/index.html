@@ -23,48 +23,52 @@
     </nav>
   </header>
 
-  <section id="background" class="ds-bg-section">
-    <h2>Page background</h2>
-    <p>
-      Every Gensyn screen uses a <strong>fixed lavender gradient</strong> on <code>html</code> and <code>body</code>.
-      The diagnostic <strong>intake</strong> adds an optional animated layer on top (Colorflow embed).
-    </p>
-
-    <p class="ds-bg-label">1 — Static gradient (default)</p>
-    <div class="ds-bg-frame" style="background: var(--gensyn-bg-gradient) fixed; background-size: cover;">
-      <div class="gensyn-card">
-        <p class="gensyn-h2" style="margin:0 0 0.5rem">White card on gradient</p>
-        <p class="gensyn-subtitle" style="margin:0">This is what users see on diagnostic + results.</p>
-      </div>
-    </div>
-
-    <p class="ds-bg-label" style="margin-top:1.5rem">2 — Animated layer (intake only, optional)</p>
-    <div class="ds-bg-frame ds-bg-frame--animated">
-      <div class="gensyn-bg-animated" aria-hidden="true">
-        <iframe
-          src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA"
-          width="1600"
-          height="1200"
-          title="Animated background preview"
-        ></iframe>
-      </div>
-      <div class="gensyn-card" style="position:relative;z-index:1">
-        <p class="gensyn-h2" style="margin:0 0 0.5rem">Intake-style stack</p>
-        <p class="gensyn-subtitle" style="margin:0">Gradient + motion behind the form card.</p>
-      </div>
-    </div>
-
-    <pre style="margin-top:1rem;background:#fff;padding:1rem;border-radius:10px;font-size:0.75rem;border:1px solid #e5e7eb;overflow:auto"><code>&lt;body class="gensyn-page"&gt;
-  &lt;div class="gensyn-app"&gt;
-    &lt;div class="gensyn-bg-animated" aria-hidden="true"&gt;
-      &lt;iframe src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA" ...&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-    &lt;div class="gensyn-container"&gt;...&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/body&gt;</code></pre>
-  </section>
-
   <main class="ds-main">
+    <section id="background" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Page background</h2>
+      <p class="gensyn-subtitle" style="margin-bottom:1.25rem">
+        Two layers: a <strong>CSS lavender gradient</strong> on every screen, plus an optional
+        <strong>animated Colorflow embed</strong> on intake (same as the live diagnostic).
+      </p>
+
+      <div class="ds-link-box">
+        <p class="gensyn-section-label" style="margin-top:0">Gradient links (copy for new projects)</p>
+        <p style="font-size:0.9rem;color:#374151;margin:0 0 0.5rem">
+          <strong>Animated (intake):</strong>
+          <a href="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA" target="_blank" rel="noopener noreferrer">https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA</a>
+        </p>
+        <p style="font-size:0.9rem;color:#374151;margin:0">
+          <strong>Static fallback (CSS):</strong>
+          <code>linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%)</code>
+          — token <code>--gensyn-bg-gradient</code>
+        </p>
+      </div>
+
+      <p class="ds-bg-label">1 — Static gradient (diagnostic + results)</p>
+      <div class="ds-bg-frame ds-bg-frame--static">
+        <div class="gensyn-card gensyn-card--compact">
+          <p class="gensyn-h2" style="margin:0 0 0.5rem;font-size:1.1rem">White card on gradient</p>
+          <p class="gensyn-subtitle" style="margin:0;font-size:0.9rem">Lavender fill behind this panel.</p>
+        </div>
+      </div>
+
+      <p class="ds-bg-label" style="margin-top:1.5rem">2 — Animated + static (intake)</p>
+      <div class="ds-bg-frame ds-bg-frame--animated">
+        <div class="gensyn-bg-animated" aria-hidden="true">
+          <iframe
+            src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA"
+            width="1600"
+            height="1200"
+            title="Colorflow animated background"
+          ></iframe>
+        </div>
+        <div class="gensyn-card gensyn-card--compact" style="position:relative;z-index:1">
+          <p class="gensyn-h2" style="margin:0 0 0.5rem;font-size:1.1rem">Intake stack</p>
+          <p class="gensyn-subtitle" style="margin:0;font-size:0.9rem">CSS gradient + Colorflow iframe behind the form.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="colors" class="ds-section gensyn-card ds-demo-card">
       <h2 class="gensyn-h2">Brand colours</h2>
       <div class="ds-swatch-grid">
@@ -72,7 +76,7 @@
         <div class="ds-swatch"><div class="ds-swatch-color" style="background:#1e2759"></div><div class="ds-swatch-meta"><strong>Navy hover</strong><code>--gensyn-navy-hover</code></div></div>
         <div class="ds-swatch"><div class="ds-swatch-color" style="background:#743694"></div><div class="ds-swatch-meta"><strong>Purple</strong><code>--gensyn-purple</code></div></div>
         <div class="ds-swatch"><div class="ds-swatch-color" style="background:#eef0f9"></div><div class="ds-swatch-meta"><strong>Navy light</strong><code>--gensyn-navy-light</code></div></div>
-        <div class="ds-swatch"><div class="ds-swatch-color" style="background:linear-gradient(160deg,#edf0fb 0%,#f5eef9 100%)"></div><div class="ds-swatch-meta"><strong>Page gradient</strong><code>--gensyn-bg-gradient</code><span style="display:block;margin-top:2px">#edf0fb → #f5eef9 · 160deg</span></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:linear-gradient(160deg,#edf0fb 0%,#f5eef9 100%)"></div><div class="ds-swatch-meta"><strong>Page gradient</strong><code>--gensyn-bg-gradient</code></div></div>
         <div class="ds-swatch"><div class="ds-swatch-color" style="background:#ffffff;border-bottom:1px solid #e5e7eb"></div><div class="ds-swatch-meta"><strong>Card</strong><code>--gensyn-surface-card</code></div></div>
       </div>
     </section>
@@ -129,16 +133,21 @@
 
     <section id="adopt" class="ds-section gensyn-card ds-demo-card">
       <h2 class="gensyn-h2">Quick adoption</h2>
-      <pre style="background:#fafafa;padding:1rem;border-radius:10px;overflow:auto;font-size:0.8rem;border:1px solid #e5e7eb"><code>&lt;link rel="stylesheet" href="path/to/gensyn-tokens.css" /&gt;
+      <pre class="ds-code"><code>&lt;link rel="stylesheet" href="path/to/gensyn-tokens.css" /&gt;
 &lt;link rel="stylesheet" href="path/to/gensyn-components.css" /&gt;
 
 &lt;body class="gensyn-page"&gt;
-  &lt;div class="gensyn-container"&gt;
-    &lt;div class="gensyn-card"&gt;...&lt;/div&gt;
+  &lt;div class="gensyn-app"&gt;
+    &lt;div class="gensyn-bg-animated" aria-hidden="true"&gt;
+      &lt;iframe src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA"&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;div class="gensyn-container"&gt;
+      &lt;div class="gensyn-card"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;</code></pre>
       <p style="margin-top:1rem;color:#6b7280;font-size:0.9rem">
-        See <strong>README.md</strong> in the repo for GitHub setup, Claude Code, and React/Vite steps.
+        See <strong>README.md</strong> in the repo for GitHub setup, Claude Code, and React steps.
       </p>
     </section>
   </main>

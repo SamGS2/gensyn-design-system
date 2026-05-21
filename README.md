@@ -180,7 +180,11 @@ var(--gensyn-bg-gradient);
 
 Apply `class="gensyn-page"` on `<body>`. Gradient is set on both `html` and `body` so it fills the screen behind white `.gensyn-card` panels.
 
-**Animated layer (intake only)** — add before your container:
+**Animated layer (intake only)** — Colorflow embed URL (copy this link):
+
+**https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA**
+
+Also in `tokens/backgrounds.json` as `animatedColorflow.embedUrl`.
 
 ```html
 <div class="gensyn-bg-animated" aria-hidden="true">
@@ -188,6 +192,8 @@ Apply `class="gensyn-page"` on `<body>`. Gradient is set on both `html` and `bod
     width="1600" height="1200" title="" style="border:0"></iframe>
 </div>
 ```
+
+Intake uses **both** the CSS gradient and this iframe. Results screens use CSS gradient only.
 
 See the **Background** section on the [style guide](https://samgs2.github.io/gensyn-design-system/#background) for a live preview.
 

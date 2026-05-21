@@ -59,6 +59,14 @@
   padding: 2.4rem 2.8rem;
 }
 
+/* Compact card for demos / style guide (not full diagnostic height) */
+.gensyn-card--compact {
+  min-height: unset;
+  padding: 1.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+}
+
 /* Typography */
 .gensyn-h1 {
   font-size: calc(1.75rem + var(--gensyn-text-bump));

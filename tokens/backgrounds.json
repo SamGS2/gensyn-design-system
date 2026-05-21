@@ -1,0 +1,18 @@
+{
+  "staticGradient": {
+    "css": "linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%)",
+    "token": "--gensyn-bg-gradient",
+    "stops": {
+      "start": "#edf0fb",
+      "end": "#f5eef9",
+      "angle": "160deg"
+    },
+    "usage": "Apply to html and body via class gensyn-page. Used on all screens."
+  },
+  "animatedColorflow": {
+    "embedUrl": "https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA",
+    "usage": "Optional fixed iframe behind intake form. Layer on top of static gradient.",
+    "componentClass": "gensyn-bg-animated",
+    "source": "frontend/src/components/IntakeForm.jsx"
+  }
+}

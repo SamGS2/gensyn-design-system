@@ -8,6 +8,8 @@
 .ds-header {
   text-align: center;
   padding: 2.5rem 1rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .ds-header img {
@@ -20,21 +22,21 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .ds-nav a {
   font-size: 0.875rem;
-  color: var(--gensyn-navy);
+  color: #263171;
   text-decoration: none;
   padding: 0.35rem 0.75rem;
   border-radius: 8px;
-  background: var(--gensyn-surface-card);
-  border: 1px solid var(--gensyn-border-card);
+  background: #ffffff;
+  border: 1px solid rgba(38, 49, 113, 0.06);
 }
 
 .ds-nav a:hover {
-  background: var(--gensyn-navy-light);
+  background: #eef0f9;
 }
 
 .ds-main {
@@ -47,10 +49,6 @@
   margin-bottom: 2.5rem;
 }
 
-.ds-section h2 {
-  margin-bottom: 1rem;
-}
-
 .ds-swatch-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -60,8 +58,8 @@
 .ds-swatch {
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--gensyn-border);
-  background: var(--gensyn-surface-card);
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
 }
 
 .ds-swatch-color {
@@ -71,13 +69,14 @@
 .ds-swatch-meta {
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
-  color: var(--gensyn-text-body);
+  color: #374151;
 }
 
 .ds-swatch-meta code {
   display: block;
-  color: var(--gensyn-text-muted);
+  color: #6b7280;
   margin-top: 0.25rem;
+  word-break: break-all;
 }
 
 .ds-demo-row {
@@ -90,7 +89,7 @@
 
 .ds-demo-card {
   padding: 2rem;
-  min-height: unset;
+  min-height: unset !important;
 }
 
 .ds-type-sample {
@@ -101,58 +100,86 @@
   text-align: center;
   padding: 2rem;
   font-size: 0.8rem;
-  color: var(--gensyn-text-placeholder);
+  color: #9ca3af;
 }
 
-/* Page background showcase — no white card, gradient visible */
-.ds-bg-section {
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  padding: 0 1.5rem;
+/* Gradient link box */
+.ds-link-box {
+  background: linear-gradient(135deg, #f8f9fe 0%, #f5f0f9 100%);
+  border: 1px solid rgba(38, 49, 113, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
-.ds-bg-section h2 {
-  color: var(--gensyn-text-heading);
-  font-size: 1.375rem;
+.ds-link-box a {
+  color: #743694;
+  word-break: break-all;
+}
+
+.ds-link-box code {
+  font-size: 0.8rem;
+  background: #fff;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+/* Background demos inside the white section card */
+.ds-bg-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin: 0 0 0.5rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.ds-bg-section > p {
-  color: var(--gensyn-text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
 }
 
 .ds-bg-frame {
-  border-radius: 16px;
-  border: 1px dashed var(--gensyn-border-card);
+  border-radius: 12px;
   overflow: hidden;
-  min-height: 220px;
+  min-height: 200px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Literal gradient — does not depend on CSS variables loading */
+.ds-bg-frame--static {
+  background: linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%);
 }
 
 .ds-bg-frame--animated {
-  min-height: 280px;
+  min-height: 240px;
+  background: linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%);
 }
 
-.ds-bg-frame .gensyn-card {
-  min-height: unset;
-  padding: 1.5rem 2rem;
-  max-width: 360px;
-  width: 100%;
+.ds-bg-frame--animated .gensyn-bg-animated {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
-.ds-bg-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--gensyn-text-placeholder);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+.ds-code {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: auto;
+  font-size: 0.8rem;
+  border: 1px solid #e5e7eb;
+  margin: 0;
+}
+
+.ds-code code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .ds-bg-frame {
+    padding: 1.25rem;
+    min-height: 160px;
+  }
 }
