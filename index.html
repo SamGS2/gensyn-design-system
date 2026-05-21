@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gensyn Design System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="gensyn-page">
+  <header class="ds-header">
+    <img src="assets/gensyn-logo.svg" alt="Gensyn" />
+    <h1 class="gensyn-h1" style="text-align:center">Gensyn Design System</h1>
+    <p class="gensyn-subtitle" style="text-align:center;margin-bottom:1rem">
+      Colours, typography, and components from the diagnostic tool — for reuse across projects.
+    </p>
+    <button type="button" class="gensyn-btn-help" id="open-guide" aria-haspopup="dialog">
+      How to use this kit
+    </button>
+    <nav class="ds-nav">
+      <a href="#background">Background</a>
+      <a href="#colors">Colours</a>
+      <a href="#type">Typography</a>
+      <a href="#components">Components</a>
+      <a href="#charts">Chart colours</a>
+      <a href="#adopt">Adoption</a>
+    </nav>
+  </header>
+
+  <!-- Usage instructions modal -->
+  <div class="ds-modal" id="guide-modal" role="dialog" aria-modal="true" aria-labelledby="guide-title" hidden>
+    <div class="ds-modal-backdrop" data-close></div>
+    <div class="ds-modal-panel gensyn-card" style="min-height:unset;padding:2rem 2.25rem">
+      <button type="button" class="ds-modal-close" data-close aria-label="Close">&times;</button>
+      <h2 class="gensyn-h2" id="guide-title">How to use this design system</h2>
+      <p class="gensyn-subtitle" style="margin-bottom:1.5rem">
+        For new Gensyn-branded apps — manual setup or with Claude Code / Cursor.
+      </p>
+
+      <h3 class="gensyn-section-label">Manual setup</h3>
+      <ol class="ds-guide-list">
+        <li>Clone or copy this repo: <a href="https://github.com/SamGS2/gensyn-design-system" target="_blank" rel="noopener">github.com/SamGS2/gensyn-design-system</a></li>
+        <li>Copy <code>css/</code> and <code>assets/</code> into your project.</li>
+        <li>Import in your main stylesheet:
+          <pre class="ds-code ds-code--small"><code>@import './styles/gensyn-tokens.css';
+@import './styles/gensyn-components.css';</code></pre>
+        </li>
+        <li>Add <code>class="gensyn-page"</code> on <code>&lt;body&gt;</code> for the lavender page background.</li>
+        <li>Wrap content in <code>.gensyn-container</code> and white panels in <code>.gensyn-card</code>.</li>
+        <li>Optional animated intake background: iframe URL in the Background section below.</li>
+      </ol>
+
+      <h3 class="gensyn-section-label">Claude Code / Cursor</h3>
+      <ol class="ds-guide-list">
+        <li>Add the kit inside your repo (submodule or copied <code>packages/gensyn-design-system/</code> folder).</li>
+        <li>Copy <code>CLAUDE.md.template</code> from this repo to your project root as <code>CLAUDE.md</code> (or a Cursor rule).</li>
+        <li>Point Claude at this style guide: <strong>https://samgs2.github.io/gensyn-design-system/</strong></li>
+        <li>Example prompt:
+          <pre class="ds-code ds-code--small"><code>Read CLAUDE.md and packages/gensyn-design-system/README.md.
+Build [your screen] using Gensyn classes only — gensyn-page,
+gensyn-card, gensyn-btn-primary. Use CSS variables from
+gensyn-tokens.css. Do not invent new colours.</code></pre>
+        </li>
+        <li>Do <strong>not</strong> paste the whole FitFinder app into chat — only this design-system folder + your feature request.</li>
+      </ol>
+
+      <button type="button" class="gensyn-btn-primary ds-modal-done" data-close style="margin-top:0.5rem">
+        Got it
+      </button>
+    </div>
+  </div>
+
+  <main class="ds-main">
+    <section id="background" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Page background</h2>
+      <p class="gensyn-subtitle" style="margin-bottom:1.25rem">
+        Every screen uses a fixed <strong>lavender gradient</strong> on <code>html</code> and <code>body</code>.
+        White <code>.gensyn-card</code> panels sit on top for forms and results.
+      </p>
+
+      <div class="ds-link-box">
+        <p class="gensyn-section-label" style="margin-top:0">Gradient links (copy for new projects)</p>
+        <p style="font-size:0.9rem;color:#374151;margin:0 0 0.5rem">
+          <strong>Animated (optional, intake-style):</strong>
+          <a href="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA" target="_blank" rel="noopener noreferrer">https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA</a>
+        </p>
+        <p style="font-size:0.9rem;color:#374151;margin:0">
+          <strong>Static (default, all pages):</strong>
+          <code>linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%)</code>
+          — token <code>--gensyn-bg-gradient</code>
+        </p>
+      </div>
+
+      <p class="ds-bg-label">Page gradient fill (live preview)</p>
+      <div class="ds-bg-frame ds-bg-frame--animated" aria-label="Animated gradient preview">
+        <div class="gensyn-bg-animated" aria-hidden="true">
+          <iframe
+            src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA"
+            width="1600"
+            height="1200"
+            title="Colorflow animated background"
+          ></iframe>
+        </div>
+        <p class="ds-bg-caption">
+          Colorflow embed · static fallback <code>#edf0fb → #f5eef9</code> · <code>--gensyn-bg-gradient</code>
+        </p>
+      </div>
+      <p style="font-size:0.85rem;color:#6b7280;margin:0">
+        Moving gradient from the diagnostic intake — full viewport behind white <code>.gensyn-card</code> panels.
+      </p>
+    </section>
+
+    <section id="colors" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Brand colours</h2>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#263171"></div><div class="ds-swatch-meta"><strong>Navy</strong><code>--gensyn-navy</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#1e2759"></div><div class="ds-swatch-meta"><strong>Navy hover</strong><code>--gensyn-navy-hover</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#743694"></div><div class="ds-swatch-meta"><strong>Purple</strong><code>--gensyn-purple</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#eef0f9"></div><div class="ds-swatch-meta"><strong>Navy light</strong><code>--gensyn-navy-light</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:linear-gradient(160deg,#edf0fb 0%,#f5eef9 100%)"></div><div class="ds-swatch-meta"><strong>Page gradient</strong><code>--gensyn-bg-gradient</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#ffffff;border-bottom:1px solid #e5e7eb"></div><div class="ds-swatch-meta"><strong>Card surface</strong><code>--gensyn-surface-card</code></div></div>
+      </div>
+    </section>
+
+    <section id="type" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Typography — Inter</h2>
+      <p class="ds-type-sample gensyn-h1">Heading 1 — Organizational Diagnostic</p>
+      <p class="ds-type-sample gensyn-h2">Heading 2 — Where does progress stall?</p>
+      <p class="ds-type-sample gensyn-subtitle">Subtitle — Tell us about your organisation. About 5 minutes.</p>
+      <p class="ds-type-sample gensyn-question">Question — What's the main challenge your team is facing?</p>
+      <p class="ds-type-sample gensyn-stage-label">Stage label — Question 3 of 7</p>
+      <p class="ds-type-sample" style="font-size:calc(0.9375rem + 6px);color:#374151">Body — Used in results and form copy.</p>
+    </section>
+
+    <section id="components" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Components</h2>
+      <p class="gensyn-stage-label">Progress</p>
+      <div class="gensyn-progress"><div class="gensyn-progress-fill" style="width:42%"></div></div>
+
+      <p class="gensyn-stage-label" style="margin-top:1.5rem">Form</p>
+      <label class="gensyn-label" for="demo-email">Work email</label>
+      <input class="gensyn-input" id="demo-email" type="email" placeholder="you@company.com" style="margin-bottom:1rem" />
+
+      <p class="gensyn-stage-label" style="margin-top:1.5rem">Options</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;max-width:480px">
+        <button type="button" class="gensyn-option">Unselected option</button>
+        <button type="button" class="gensyn-option selected">Selected option</button>
+      </div>
+
+      <p class="gensyn-stage-label" style="margin-top:1.5rem">Actions</p>
+      <div class="ds-demo-row" style="max-width:320px">
+        <button type="button" class="gensyn-btn-primary">Continue</button>
+      </div>
+
+      <p class="gensyn-stage-label" style="margin-top:1.5rem">Results</p>
+      <span class="gensyn-badge">execution</span>
+      <p class="gensyn-section-label" style="margin-top:1rem">Problem summary</p>
+      <p style="color:#374151;font-size:0.95rem">Your team agrees in meetings but handoffs break down between departments.</p>
+    </section>
+
+    <section id="charts" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Chart spectrum</h2>
+      <p class="gensyn-subtitle" style="margin-bottom:1rem">Challenge gauge (left → right)</p>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#2563eb"></div><div class="ds-swatch-meta">#2563eb</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#3b82f6"></div><div class="ds-swatch-meta">#3b82f6</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#38bdf8"></div><div class="ds-swatch-meta">#38bdf8</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#22c55e"></div><div class="ds-swatch-meta">#22c55e</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#84cc16"></div><div class="ds-swatch-meta">#84cc16</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#f59e0b"></div><div class="ds-swatch-meta">#f59e0b</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-color" style="background:#ea580c"></div><div class="ds-swatch-meta">#ea580c</div></div>
+      </div>
+    </section>
+
+    <section id="adopt" class="ds-section gensyn-card ds-demo-card">
+      <h2 class="gensyn-h2">Quick adoption</h2>
+      <p class="gensyn-subtitle">Open <strong>How to use this kit</strong> at the top for full manual and Claude instructions.</p>
+      <pre class="ds-code"><code>&lt;link rel="stylesheet" href="path/to/gensyn-tokens.css" /&gt;
+&lt;link rel="stylesheet" href="path/to/gensyn-components.css" /&gt;
+
+&lt;body class="gensyn-page"&gt;
+  &lt;div class="gensyn-container"&gt;
+    &lt;div class="gensyn-card"&gt;Your content&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+    </section>
+  </main>
+
+  <footer class="ds-footer">Gensyn Design System — <a href="https://github.com/SamGS2/gensyn-design-system">GitHub</a></footer>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('guide-modal');
+      var openBtn = document.getElementById('open-guide');
+      if (!modal || !openBtn) return;
+
+      function openModal() {
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openModal);
+      modal.querySelectorAll('[data-close]').forEach(function (el) {
+        el.addEventListener('click', closeModal);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

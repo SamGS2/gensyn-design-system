@@ -1,0 +1,299 @@
+@import url('css/gensyn-tokens.css');
+@import url('css/gensyn-components.css');
+
+* {
+  box-sizing: border-box;
+}
+
+.ds-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ds-header img {
+  height: calc(52px + 30px);
+  margin-bottom: 1rem;
+}
+
+.ds-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.ds-nav a {
+  font-size: 0.875rem;
+  color: #263171;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(38, 49, 113, 0.06);
+}
+
+.ds-nav a:hover {
+  background: #eef0f9;
+}
+
+.gensyn-btn-help {
+  display: inline-block;
+  margin: 0 auto 1.25rem;
+  padding: 0.65rem 1.25rem;
+  background: #263171;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.gensyn-btn-help:hover {
+  background: #1e2759;
+  transform: translateY(-1px);
+}
+
+.ds-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.ds-section {
+  margin-bottom: 2.5rem;
+}
+
+.ds-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.ds-swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.ds-swatch-color {
+  height: 64px;
+}
+
+.ds-swatch-meta {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.ds-swatch-meta code {
+  display: block;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  word-break: break-all;
+}
+
+.ds-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.ds-demo-card {
+  padding: 2rem;
+  min-height: unset !important;
+}
+
+.ds-type-sample {
+  margin-bottom: 0.75rem;
+}
+
+.ds-footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Gradient link box */
+.ds-link-box {
+  background: linear-gradient(135deg, #f8f9fe 0%, #f5f0f9 100%);
+  border: 1px solid rgba(38, 49, 113, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.ds-link-box a {
+  color: #743694;
+  word-break: break-all;
+}
+
+.ds-link-box code {
+  font-size: 0.8rem;
+  background: #fff;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+/* Lavender gradient preview — no white card overlay */
+.ds-bg-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.ds-bg-frame--animated {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 220px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%);
+  border: 1px solid rgba(38, 49, 113, 0.12);
+}
+
+.ds-bg-frame--animated .gensyn-bg-animated {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ds-bg-caption {
+  position: relative;
+  z-index: 1;
+  margin: 0 1rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #263171;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: calc(100% - 2rem);
+}
+
+.ds-bg-caption code {
+  font-size: 0.75rem;
+}
+
+/* Modal — usage instructions */
+.ds-modal[hidden] {
+  display: none;
+}
+
+.ds-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.ds-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.45);
+}
+
+.ds-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  max-height: min(85vh, 720px);
+  overflow-y: auto;
+  margin: 0;
+}
+
+.ds-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: #eef0f9;
+  color: #263171;
+  font-size: 1.35rem;
+  line-height: 1;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ds-modal-close:hover {
+  background: #e5e7eb;
+}
+
+.ds-guide-list {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.ds-guide-list li {
+  margin-bottom: 0.5rem;
+}
+
+.ds-guide-list a {
+  color: #743694;
+}
+
+.ds-code--small {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+}
+
+.ds-modal-done {
+  width: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.ds-footer a {
+  color: #743694;
+  text-decoration: none;
+}
+
+.ds-code {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: auto;
+  font-size: 0.8rem;
+  border: 1px solid #e5e7eb;
+  margin: 0;
+}
+
+.ds-code code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .ds-bg-frame {
+    padding: 1.25rem;
+    min-height: 160px;
+  }
+}
