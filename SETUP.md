@@ -2,8 +2,9 @@
 
 - [ ] Create GitHub repo `gensyn-design-system`
 - [ ] `cd design-system` → `git init` → add → commit → push to `main`
-- [ ] Settings → Pages → source **GitHub Actions**
-- [ ] Wait for workflow green; open Pages URL
+- [ ] Actions tab → workflow green (re-run if needed)
+- [ ] Settings → Pages → branch **gh-pages** / **(root)**
+- [ ] Wait 1–2 min; open Pages URL
 - [ ] Share URL with boss
 - [ ] Copy `CLAUDE.md.template` into first new project as `CLAUDE.md`
 - [ ] Tag `v1.0.0` when stable

@@ -37,10 +37,13 @@ Replace `YOUR_ORG` with your GitHub username or organisation.
 
 ### Step 3 — Enable GitHub Pages
 
-1. Repo → **Settings** → **Pages**
-2. **Build and deployment** → Source: **GitHub Actions**
-3. Push to `main` triggers `.github/workflows/pages.yml` automatically.
-4. After ~1 minute, open the URL shown under Pages (e.g. `https://samgs2.github.io/gensyn-design-system/`).
+1. Repo → **Actions** → confirm **“Deploy style guide to GitHub Pages”** ran green on `main` (re-run if needed: **Run workflow**).
+2. Repo → **Settings** → **Pages**
+3. **Build and deployment** → Source: **Deploy from a branch**
+4. Branch: **`gh-pages`** · Folder: **`/ (root)`** → **Save**
+5. Wait 1–2 minutes, then open: **https://samgs2.github.io/gensyn-design-system/**
+
+If you still see 404: Pages source must be **`gh-pages`**, not `main`. The workflow publishes the style guide to the `gh-pages` branch automatically.
 
 ### Step 4 — Share with your boss and team
 
