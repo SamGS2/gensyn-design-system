@@ -155,28 +155,38 @@
   font-weight: 600;
 }
 
-.ds-bg-frame--lavender {
+.ds-bg-frame--animated {
   border-radius: 12px;
   overflow: hidden;
-  min-height: 140px;
+  min-height: 220px;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 1rem;
+  padding: 0;
   margin-bottom: 0.75rem;
   background: linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%);
   border: 1px solid rgba(38, 49, 113, 0.12);
 }
 
+.ds-bg-frame--animated .gensyn-bg-animated {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 .ds-bg-caption {
-  margin: 0;
-  font-size: 0.8rem;
+  position: relative;
+  z-index: 1;
+  margin: 0 1rem 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #263171;
-  background: rgba(255, 255, 255, 0.72);
-  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.4rem 0.85rem;
   border-radius: 8px;
+  text-align: center;
+  max-width: calc(100% - 2rem);
 }
 
 .ds-bg-caption code {

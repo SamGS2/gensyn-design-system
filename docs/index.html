@@ -90,12 +90,22 @@ gensyn-tokens.css. Do not invent new colours.</code></pre>
         </p>
       </div>
 
-      <p class="ds-bg-label">Page gradient fill</p>
-      <div class="ds-bg-frame ds-bg-frame--lavender" aria-label="Lavender gradient preview">
-        <p class="ds-bg-caption">#edf0fb → #f5eef9 · 160deg · <code>--gensyn-bg-gradient</code></p>
+      <p class="ds-bg-label">Page gradient fill (live preview)</p>
+      <div class="ds-bg-frame ds-bg-frame--animated" aria-label="Animated gradient preview">
+        <div class="gensyn-bg-animated" aria-hidden="true">
+          <iframe
+            src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA"
+            width="1600"
+            height="1200"
+            title="Colorflow animated background"
+          ></iframe>
+        </div>
+        <p class="ds-bg-caption">
+          Colorflow embed · static fallback <code>#edf0fb → #f5eef9</code> · <code>--gensyn-bg-gradient</code>
+        </p>
       </div>
       <p style="font-size:0.85rem;color:#6b7280;margin:0">
-        This is the full-page background users see around white content cards — not a separate white panel.
+        Moving gradient from the diagnostic intake — full viewport behind white <code>.gensyn-card</code> panels.
       </p>
     </section>
 
