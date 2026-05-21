@@ -3,6 +3,44 @@
  * Requires gensyn-tokens.css
  */
 
+/* App layout — centered column on gradient (matches diagnostic .app) */
+.gensyn-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Optional animated background (intake / hero) — sits behind content */
+.gensyn-bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gensyn-bg-animated iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
+  border: 0;
+}
+
+.gensyn-app > .gensyn-container,
+.gensyn-app > .gensyn-bg-animated + .gensyn-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
 /* Card */
 .gensyn-card {
   background: var(--gensyn-surface-card);

@@ -53,9 +53,19 @@
   --gensyn-radius-control: 10px;
   --gensyn-radius-input-lg: 12px;
   --gensyn-container-max: 1120px;
+
+  /* Animated intake background (Colorflow embed) — optional */
+  --gensyn-bg-animated-url: https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA;
 }
 
-/* Optional page shell — apply to body or .gensyn-app */
+/* Lavender gradient on html + body so it always fills the viewport */
+html {
+  min-height: 100%;
+  background: var(--gensyn-bg-gradient) fixed;
+  background-size: cover;
+}
+
+/* Page shell — apply class="gensyn-page" on <body> */
 .gensyn-page {
   font-family: var(--gensyn-font);
   background: var(--gensyn-bg-gradient) fixed;

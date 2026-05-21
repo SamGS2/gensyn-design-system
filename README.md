@@ -152,6 +152,8 @@ Claude reads files from the repo each session — consistent output across proje
 | Class | Use |
 |-------|-----|
 | `.gensyn-page` | Page shell (gradient bg, Inter, min-height) |
+| `.gensyn-app` | Centered flex layout (matches diagnostic `.app`) |
+| `.gensyn-bg-animated` | Optional fixed Colorflow iframe layer (intake) |
 | `.gensyn-container` | Max-width 1120px wrapper |
 | `.gensyn-card` | White content panel |
 | `.gensyn-card--intake` | Smaller intake variant |
@@ -167,13 +169,27 @@ Variables: `--gensyn-navy`, `--gensyn-purple`, `--gensyn-bg-gradient`, etc. — 
 
 ---
 
-## Intake animated background
+## Page background
 
-The diagnostic intake uses an external embed (not in this package):
+**Static gradient (default on every page)** — in `gensyn-tokens.css`:
 
-`https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA`
+```css
+/* #edf0fb → #f5eef9 at 160deg, fixed to viewport */
+var(--gensyn-bg-gradient);
+```
 
-Document separately if a future project needs the same motion background.
+Apply `class="gensyn-page"` on `<body>`. Gradient is set on both `html` and `body` so it fills the screen behind white `.gensyn-card` panels.
+
+**Animated layer (intake only)** — add before your container:
+
+```html
+<div class="gensyn-bg-animated" aria-hidden="true">
+  <iframe src="https://colorflow-embed.b-cdn.net/embed.html#e=wvk6jmkA"
+    width="1600" height="1200" title="" style="border:0"></iframe>
+</div>
+```
+
+See the **Background** section on the [style guide](https://samgs2.github.io/gensyn-design-system/#background) for a live preview.
 
 ---
 

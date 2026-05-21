@@ -16,8 +16,10 @@
     "resultsNavy": "#1B2A4A"
   },
   "surface": {
+    "pageGradient": "linear-gradient(160deg, #edf0fb 0%, #f5eef9 100%)",
     "pageGradientStart": "#edf0fb",
     "pageGradientEnd": "#f5eef9",
+    "pageGradientAngle": "160deg",
     "card": "#ffffff",
     "input": "#fafafa",
     "optionHover": "#f0f1f8",

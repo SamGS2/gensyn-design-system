@@ -1,6 +1,10 @@
 @import url('css/gensyn-tokens.css');
 @import url('css/gensyn-components.css');
 
+* {
+  box-sizing: border-box;
+}
+
 .ds-header {
   text-align: center;
   padding: 2.5rem 1rem 1rem;
@@ -98,4 +102,57 @@
   padding: 2rem;
   font-size: 0.8rem;
   color: var(--gensyn-text-placeholder);
+}
+
+/* Page background showcase — no white card, gradient visible */
+.ds-bg-section {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.ds-bg-section h2 {
+  color: var(--gensyn-text-heading);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ds-bg-section > p {
+  color: var(--gensyn-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.ds-bg-frame {
+  border-radius: 16px;
+  border: 1px dashed var(--gensyn-border-card);
+  overflow: hidden;
+  min-height: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.ds-bg-frame--animated {
+  min-height: 280px;
+}
+
+.ds-bg-frame .gensyn-card {
+  min-height: unset;
+  padding: 1.5rem 2rem;
+  max-width: 360px;
+  width: 100%;
+}
+
+.ds-bg-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gensyn-text-placeholder);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
