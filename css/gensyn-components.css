@@ -1,0 +1,280 @@
+/**
+ * Gensyn Design System — UI components
+ * Requires gensyn-tokens.css
+ */
+
+/* Card */
+.gensyn-card {
+  background: var(--gensyn-surface-card);
+  border-radius: var(--gensyn-radius-card);
+  padding: 4rem 4.25rem;
+  min-height: min(72vh, 820px);
+  box-shadow: var(--gensyn-shadow-card);
+  border: 1px solid var(--gensyn-border-card);
+}
+
+.gensyn-card--intake {
+  max-width: min(896px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: min(56vh, 656px);
+  padding: 2.4rem 2.8rem;
+}
+
+/* Typography */
+.gensyn-h1 {
+  font-size: calc(1.75rem + var(--gensyn-text-bump));
+  font-weight: 700;
+  color: var(--gensyn-text-heading);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.gensyn-h2 {
+  font-size: calc(1.375rem + var(--gensyn-text-bump));
+  font-weight: 600;
+  color: var(--gensyn-text-heading);
+  line-height: 1.35;
+}
+
+.gensyn-subtitle {
+  color: var(--gensyn-text-muted);
+  font-size: calc(0.9375rem + var(--gensyn-text-bump));
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.gensyn-stage-label {
+  font-size: calc(0.75rem + var(--gensyn-text-bump));
+  color: var(--gensyn-text-placeholder);
+  margin-bottom: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.gensyn-question {
+  font-size: calc(1.25rem + var(--gensyn-text-bump));
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  line-height: 1.4;
+  color: var(--gensyn-text-primary);
+}
+
+/* Forms */
+.gensyn-label {
+  display: block;
+  font-size: calc(0.8125rem + var(--gensyn-text-bump));
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+  color: var(--gensyn-text-body);
+  letter-spacing: 0.01em;
+}
+
+.gensyn-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--gensyn-border);
+  border-radius: var(--gensyn-radius-control);
+  font-size: calc(0.9375rem + var(--gensyn-text-bump));
+  font-family: var(--gensyn-font);
+  transition: all 0.2s;
+  background: var(--gensyn-surface-input);
+  color: var(--gensyn-text-primary);
+}
+
+.gensyn-input:focus {
+  outline: none;
+  border-color: var(--gensyn-navy);
+  background: var(--gensyn-surface-card);
+  box-shadow: var(--gensyn-focus-ring);
+}
+
+.gensyn-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.25rem 1rem;
+  border: 1.5px solid var(--gensyn-border);
+  border-radius: var(--gensyn-radius-input-lg);
+  font-size: calc(0.9375rem + var(--gensyn-text-bump));
+  font-family: var(--gensyn-font);
+  resize: vertical;
+  min-height: 228px;
+  line-height: 1.5;
+  background: var(--gensyn-surface-input);
+  transition: all 0.2s;
+}
+
+.gensyn-textarea:focus {
+  outline: none;
+  border-color: var(--gensyn-navy);
+  background: var(--gensyn-surface-card);
+  box-shadow: var(--gensyn-focus-ring);
+}
+
+.gensyn-textarea::placeholder {
+  color: var(--gensyn-text-placeholder);
+}
+
+/* Buttons */
+.gensyn-btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background: var(--gensyn-navy);
+  color: white;
+  border: none;
+  border-radius: var(--gensyn-radius-control);
+  font-size: calc(0.9375rem + var(--gensyn-text-bump));
+  font-weight: 600;
+  font-family: var(--gensyn-font);
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.gensyn-btn-primary:hover {
+  background: var(--gensyn-navy-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--gensyn-shadow-button);
+}
+
+.gensyn-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.gensyn-btn-secondary {
+  display: inline-block;
+  padding: 0.875rem 2.5rem;
+  background: var(--gensyn-navy-light);
+  color: var(--gensyn-navy);
+  border: none;
+  border-radius: var(--gensyn-radius-control);
+  font-weight: 600;
+  font-size: calc(0.9375rem + var(--gensyn-text-bump));
+  font-family: var(--gensyn-font);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gensyn-option {
+  padding: 1rem 1.25rem;
+  background: var(--gensyn-surface-input);
+  border: 1.5px solid var(--gensyn-border);
+  border-radius: var(--gensyn-radius-control);
+  text-align: left;
+  font-size: calc(0.9375rem + var(--gensyn-text-bump));
+  font-family: var(--gensyn-font);
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--gensyn-text-primary);
+  line-height: 1.4;
+  width: 100%;
+}
+
+.gensyn-option:hover {
+  border-color: var(--gensyn-navy);
+  background: var(--gensyn-surface-option-hover);
+}
+
+.gensyn-option.selected {
+  border-color: var(--gensyn-navy);
+  background: var(--gensyn-surface-option-selected);
+  color: var(--gensyn-navy);
+  font-weight: 500;
+  box-shadow: var(--gensyn-focus-ring);
+}
+
+/* Progress */
+.gensyn-progress {
+  height: 3px;
+  background: var(--gensyn-border);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.gensyn-progress-fill {
+  height: 100%;
+  background: var(--gensyn-progress-gradient);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+/* Results / badges */
+.gensyn-badge {
+  display: inline-block;
+  font-size: calc(0.875rem + var(--gensyn-text-bump));
+  font-weight: 600;
+  color: var(--gensyn-navy);
+  background: var(--gensyn-navy-light);
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.gensyn-section-label {
+  font-size: calc(0.6875rem + var(--gensyn-text-bump));
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gensyn-purple);
+  margin-bottom: 0.625rem;
+  font-weight: 600;
+}
+
+.gensyn-recommendation {
+  background: var(--gensyn-surface-recommendation);
+  padding: 2rem 3rem;
+  border-top: 2px solid var(--gensyn-navy);
+}
+
+/* Logo */
+.gensyn-logo {
+  display: block;
+  height: calc(36px + 26px);
+  margin: 0 auto 2rem;
+}
+
+.gensyn-logo--intake {
+  height: calc(72px + 30px);
+  max-width: 100%;
+}
+
+/* Error */
+.gensyn-error {
+  color: var(--gensyn-error);
+  font-size: calc(0.8125rem + var(--gensyn-text-bump));
+  margin-bottom: 1rem;
+  padding: 0.625rem 0.875rem;
+  background: var(--gensyn-error-bg);
+  border-radius: 8px;
+  border: 1px solid var(--gensyn-error-border);
+}
+
+/* Spinner */
+.gensyn-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--gensyn-border);
+  border-top-color: var(--gensyn-navy);
+  border-radius: 50%;
+  animation: gensyn-spin 0.8s linear infinite;
+  margin: 0 auto 1.25rem;
+}
+
+@keyframes gensyn-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .gensyn-card {
+    padding: 2.5rem 1.5rem;
+    min-height: unset;
+  }
+  .gensyn-card--intake {
+    padding: 2rem 1.2rem;
+    min-height: unset;
+  }
+}

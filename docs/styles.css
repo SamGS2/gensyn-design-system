@@ -1,0 +1,101 @@
+@import url('css/gensyn-tokens.css');
+@import url('css/gensyn-components.css');
+
+.ds-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+}
+
+.ds-header img {
+  height: calc(52px + 30px);
+  margin-bottom: 1rem;
+}
+
+.ds-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.ds-nav a {
+  font-size: 0.875rem;
+  color: var(--gensyn-navy);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background: var(--gensyn-surface-card);
+  border: 1px solid var(--gensyn-border-card);
+}
+
+.ds-nav a:hover {
+  background: var(--gensyn-navy-light);
+}
+
+.ds-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.ds-section {
+  margin-bottom: 2.5rem;
+}
+
+.ds-section h2 {
+  margin-bottom: 1rem;
+}
+
+.ds-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.ds-swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--gensyn-border);
+  background: var(--gensyn-surface-card);
+}
+
+.ds-swatch-color {
+  height: 64px;
+}
+
+.ds-swatch-meta {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--gensyn-text-body);
+}
+
+.ds-swatch-meta code {
+  display: block;
+  color: var(--gensyn-text-muted);
+  margin-top: 0.25rem;
+}
+
+.ds-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.ds-demo-card {
+  padding: 2rem;
+  min-height: unset;
+}
+
+.ds-type-sample {
+  margin-bottom: 0.75rem;
+}
+
+.ds-footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: var(--gensyn-text-placeholder);
+}

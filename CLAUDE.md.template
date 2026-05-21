@@ -1,0 +1,40 @@
+# UI — Gensyn Design System
+
+This project uses the Gensyn design system. Follow it for all user-facing UI.
+
+## Source
+
+- Package path: `packages/gensyn-design-system/` (or copy from design-system repo)
+- Style guide: https://YOUR_ORG.github.io/gensyn-design-system/
+- Tokens: `tokens/colors.json`, `tokens/typography.json`
+
+## CSS (required)
+
+```css
+@import './packages/gensyn-design-system/css/gensyn-tokens.css';
+@import './packages/gensyn-design-system/css/gensyn-components.css';
+```
+
+Apply `class="gensyn-page"` on `<body>` (or root layout).
+
+## Rules
+
+- Font: Inter only (`var(--gensyn-font)`)
+- Page background: `var(--gensyn-bg-gradient)` — do not use flat white pages
+- Primary brand: `var(--gensyn-navy)` — headings, primary buttons, focus states
+- Accent: `var(--gensyn-purple)` — section labels, footer links
+- Content surfaces: `.gensyn-card` (white, 16px radius, soft shadow)
+- Do not invent new hex colours; use CSS variables from `gensyn-tokens.css`
+- Do not copy product logic from gensyn-diagnostic — only visual patterns
+
+## Components
+
+Prefer existing classes: `.gensyn-btn-primary`, `.gensyn-input`, `.gensyn-option`, `.gensyn-progress`, `.gensyn-badge`, `.gensyn-h1`, `.gensyn-subtitle`
+
+Logo: `assets/gensyn-logo.svg` with `.gensyn-logo` or `.gensyn-logo--intake`
+
+## When building new screens
+
+1. Read `packages/gensyn-design-system/README.md`
+2. Match layout: centered container, white card on lavender gradient
+3. Ask before introducing new UI libraries that override these tokens

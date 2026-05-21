@@ -1,0 +1,28 @@
+{
+  "layout": {
+    "containerMaxWidth": "1120px",
+    "intakeCardMaxWidth": "896px",
+    "appPadding": "2rem",
+    "appPaddingMobile": "1rem"
+  },
+  "card": {
+    "padding": "4rem 4.25rem",
+    "paddingIntake": "2.4rem 2.8rem",
+    "paddingMobile": "2.5rem 1.5rem",
+    "minHeight": "min(72vh, 820px)",
+    "minHeightIntake": "min(56vh, 656px)",
+    "borderRadius": "16px"
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "10px",
+    "lg": "12px",
+    "pill": "20px"
+  },
+  "logo": {
+    "default": "calc(36px + 26px)",
+    "intake": "calc(72px + 30px)",
+    "diagnostic": "calc(52px + 30px)",
+    "results": "170px"
+  }
+}

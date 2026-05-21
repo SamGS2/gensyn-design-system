@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Copied into docs/ for GitHub Pages preview & deploy
+docs/css/
+docs/assets/

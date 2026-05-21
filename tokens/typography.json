@@ -1,0 +1,36 @@
+{
+  "fontFamily": {
+    "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  },
+  "fontWeights": {
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700
+  },
+  "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+  "textBump": "6px",
+  "sizes": {
+    "h1": "calc(1.75rem + var(--gensyn-text-bump))",
+    "h2": "calc(1.375rem + var(--gensyn-text-bump))",
+    "subtitle": "calc(0.9375rem + var(--gensyn-text-bump))",
+    "body": "calc(0.9375rem + var(--gensyn-text-bump))",
+    "label": "calc(0.8125rem + var(--gensyn-text-bump))",
+    "question": "calc(1.25rem + var(--gensyn-text-bump))",
+    "stageLabel": "calc(0.75rem + var(--gensyn-text-bump))",
+    "footer": "calc(0.75rem + var(--gensyn-text-bump))"
+  },
+  "lineHeights": {
+    "tight": 1.35,
+    "normal": 1.5,
+    "relaxed": 1.6,
+    "loose": 1.65
+  },
+  "letterSpacing": {
+    "tight": "-0.01em",
+    "normal": "0.01em",
+    "wide": "0.08em",
+    "wider": "0.1em"
+  }
+}

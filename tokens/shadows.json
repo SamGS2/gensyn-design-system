@@ -1,0 +1,5 @@
+{
+  "card": "0 2px 12px rgba(38, 49, 113, 0.06)",
+  "buttonHover": "0 4px 12px rgba(38, 49, 113, 0.2)",
+  "focus": "0 0 0 3px rgba(38, 49, 113, 0.08)"
+}

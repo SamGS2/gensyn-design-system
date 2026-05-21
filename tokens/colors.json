@@ -1,0 +1,65 @@
+{
+  "brand": {
+    "navy": "#263171",
+    "navyHover": "#1e2759",
+    "navyLight": "#eef0f9",
+    "navyInactive": "#8891BC",
+    "purple": "#743694",
+    "purpleInactive": "#B088C9"
+  },
+  "text": {
+    "primary": "#1a1a2e",
+    "heading": "#263171",
+    "body": "#374151",
+    "muted": "#6b7280",
+    "placeholder": "#9ca3af",
+    "resultsNavy": "#1B2A4A"
+  },
+  "surface": {
+    "pageGradientStart": "#edf0fb",
+    "pageGradientEnd": "#f5eef9",
+    "card": "#ffffff",
+    "input": "#fafafa",
+    "optionHover": "#f0f1f8",
+    "optionSelected": "#eef0f9",
+    "recommendationStart": "#f8f9fe",
+    "recommendationEnd": "#f5f0f9",
+    "errorBg": "#fef2f2",
+    "errorBorder": "#fecaca",
+    "warningText": "#92400e",
+    "warningBg": "#78350f"
+  },
+  "border": {
+    "default": "#e5e7eb",
+    "light": "#f0f0f0",
+    "input": "#d1d5db",
+    "card": "rgba(38, 49, 113, 0.06)"
+  },
+  "semantic": {
+    "error": "#dc2626",
+    "focusRing": "rgba(38, 49, 113, 0.08)",
+    "buttonShadow": "rgba(38, 49, 113, 0.2)",
+    "cardShadow": "rgba(38, 49, 113, 0.06)"
+  },
+  "chart": {
+    "challengeSpectrum": [
+      "#2563eb",
+      "#3b82f6",
+      "#38bdf8",
+      "#22c55e",
+      "#84cc16",
+      "#f59e0b",
+      "#ea580c"
+    ],
+    "dynamicSpectrum": ["#2563eb", "#22c55e", "#ea580c"],
+    "gaugeDefault": [
+      "#38bdf8",
+      "#60a5fa",
+      "#818cf8",
+      "#a78bfa",
+      "#c084fc",
+      "#e879f9",
+      "#f472b6"
+    ]
+  }
+}
